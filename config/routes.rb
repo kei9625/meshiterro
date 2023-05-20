@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # get 'post_images/new'
   # get 'post_images/index'
   # get 'post_images/show'
-  resources :post_images, only: [:new, :index, :show]
+  resources :post_images, only: [:new, :create, :index, :show]
 
   # 名前付きルート
   get '/homes/about' => 'homes#about', as: 'about'
