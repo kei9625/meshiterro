@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  # 権限の設定
+  before_action :authenticate_user!, except: [:top]
   # deviseのストロングパラメータの編集は"Application Controller"でのみ"編集及び修正"が可能
   before_action :configure_permitted_parameters, if: :devise_controller?
 
